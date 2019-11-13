@@ -18,9 +18,9 @@ namespace QuantConnect.Lean.AlgorithmMonitor.Tests.Model
         public void MergeCharts_EmptyCharts_GetsMerged()
         {
             // Arrange
-            var target = new Result();
+            var target = new Monitor.Model.Result();
 
-            var source = new Result
+            var source = new Monitor.Model.Result
             {
                 Charts = new Dictionary<string, ChartDefinition>
                 {
@@ -62,7 +62,7 @@ namespace QuantConnect.Lean.AlgorithmMonitor.Tests.Model
         public void MergeCharts_SameSeriesUpdatedData_GetsMerged()
         {
             // Arrange
-            var target = new Result
+            var target = new Monitor.Model.Result
             {
                 Charts = new Dictionary<string, ChartDefinition>
                 {
@@ -90,7 +90,7 @@ namespace QuantConnect.Lean.AlgorithmMonitor.Tests.Model
                 }
             };
 
-            var source = new Result
+            var source = new Monitor.Model.Result
             {
                 Charts = new Dictionary<string, ChartDefinition>
                 {

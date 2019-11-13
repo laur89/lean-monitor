@@ -10,7 +10,7 @@ namespace Monitor.Model
     {
         /* QuantConnect results are either BacktestResult or LiveResult. 
          * They have common properties as well as specific properties.
-         * However, the QC libary has no base class for them. For this tool, we do need a baseclass
+         * However, the QC library has no base class for them. For this tool, we do need a baseclass
          * This baseclass is 'Result' which remembers the actual result type, and has all possible fields to show in the UI
          */
 
@@ -47,7 +47,9 @@ namespace Monitor.Model
             if (result.ResultType != ResultType.Backtest) throw new ArgumentException(@"Result is not of type Backtest", nameof(result));
 
             // Total performance is always null in the original data holder
-            return new BacktestResult(true, result.Charts.MapToChartDictionary(), result.Orders, result.ProfitLoss, result.Statistics, result.RuntimeStatistics, result.RollingWindow);
+            return new BacktestResult(result.Charts.MapToChartDictionary(),
+                    result.Orders, result.ProfitLoss, result.Statistics,
+                    result.RuntimeStatistics, result.RollingWindow);
         }
 
         public LiveResult ToLiveResult(Result result)
@@ -57,7 +59,9 @@ namespace Monitor.Model
 
             // Holdings is not supported in the current result.
             // ServerStatistics is not supported in the current result.
-            return new LiveResult(true, result.Charts.MapToChartDictionary(), result.Orders, result.ProfitLoss, null, null, result.Statistics, result.RuntimeStatistics);
+            return new LiveResult(result.Charts.MapToChartDictionary(),
+                    result.Orders, result.ProfitLoss, null, null,
+                    result.Statistics, result.RuntimeStatistics);
         }
     }
 }

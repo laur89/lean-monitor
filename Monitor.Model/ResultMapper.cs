@@ -172,7 +172,7 @@ namespace Monitor.Model
         {
             return new SeriesDefinition
             {
-                Color = Color.FromArgb(sourceSeries.Color.A, sourceSeries.Color.R, sourceSeries.Color.G,sourceSeries.Color.B),
+                //Color = Color.FromArgb(sourceSeries.Color.A, sourceSeries.Color.R, sourceSeries.Color.G,sourceSeries.Color.B),
                 Index = sourceSeries.Index,
                 Name = sourceSeries.Name,
                 ScatterMarkerSymbol = sourceSeries.ScatterMarkerSymbol.MapToScatterMarkerSymbol(),
@@ -186,7 +186,7 @@ namespace Monitor.Model
         {
             return new Series
             {
-                Color = System.Drawing.Color.FromArgb(sourceSeries.Color.A, sourceSeries.Color.R, sourceSeries.Color.G, sourceSeries.Color.B),
+                //Color = System.Drawing.Color.FromArgb(sourceSeries.Color.A, sourceSeries.Color.R, sourceSeries.Color.G, sourceSeries.Color.B),
                 Index = sourceSeries.Index,
                 Name = sourceSeries.Name,
                 ScatterMarkerSymbol = sourceSeries.ScatterMarkerSymbol.MapToQuantConnectScatterMarkerSymbol(),

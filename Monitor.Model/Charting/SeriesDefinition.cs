@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Media;
+using System.Drawing;
 
 namespace Monitor.Model.Charting
 {
@@ -11,7 +12,7 @@ namespace Monitor.Model.Charting
 
         public SeriesType SeriesType { get; set; } = SeriesType.Line;
 
-        public Color Color { get; set; } = Colors.CornflowerBlue;
+        //public System.Drawing.Color Color { get; set; } = System.Drawing.Colors.CornflowerBlue;
 
         public string Unit { get; set; } = "?";
 

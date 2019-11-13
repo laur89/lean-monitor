@@ -15,7 +15,7 @@ namespace Monitor.Model
                 SeriesType = series.SeriesType,
                 Index = series.Index,
                 Unit = series.Unit,
-                Color = series.Color,
+                //Color = series.Color,
                 ScatterMarkerSymbol = series.ScatterMarkerSymbol
             };
 
